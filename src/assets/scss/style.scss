@@ -1,0 +1,151 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Sinp- Single Product Ecommerce HTML Template
+    Version: 1.0
+
+-----------------------------------------------------------------------------------*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /*  offcanvas menu style */
+  body.offcanvas-open {
+    @apply overflow-y-hidden;
+  }
+  .offcanvas.offcanvas-open {
+    @apply transform translate-x-0;
+  }
+
+  .offcanvas.offcanvas-open {
+    @apply transform translate-x-0;
+  }
+
+  .offcanvas .offcanvas-menu ul li {
+    @apply relative;
+  }
+
+  .offcanvas .offcanvas-menu ul li .menu-expand {
+    @apply absolute z-10 top-0 right-0 w-6 h-11 cursor-pointer bg-transparent;
+  }
+  .offcanvas .offcanvas-menu ul li .menu-expand::before,
+  .offcanvas .offcanvas-menu ul li .menu-expand::after {
+    @apply bg-dark absolute z-10 top-1/2 left-0 w-4 h-1px transition-all ease-in-out duration-500;
+    content: "";
+  }
+  .offcanvas .offcanvas-menu ul li .menu-expand::after {
+    @apply transform rotate-90;
+  }
+  .offcanvas .offcanvas-menu ul li.active > .menu-expand::after {
+    @apply transform rotate-0  scale-75;
+  }
+
+  /* offcanvas menu style ENd */
+
+  /* hero slider style start  */
+
+  .hero-slider .swiper-pagination {
+  }
+  .hero-slider .swiper-pagination-bullet {
+    @apply bg-transparent opacity-100 w-5 h-5 relative border border-solid border-orange  before:absolute before:empty before:z-10 before:border before:border-solid before:border-orange before:inset-1 before:rounded-full;
+  }
+
+  .hero-slider .swiper-pagination-bullet-active {
+    @apply before:bg-orange;
+  }
+
+  .hero-slider .swiper-slide-active .slider-content > * {
+    @apply animate-fadeInLeft;
+  }
+  .hero-slider .swiper-slide-active img {
+    @apply animate-fadeInRight delay-1000;
+  }
+
+  /* hero slider style end  */
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    @apply text-sm;
+  }
+
+  /*  modal menu style */
+  body.modal-open {
+    @apply overflow-y-hidden;
+  }
+  .modal.modal-open {
+    @apply block opacity-100;
+  }
+
+  .is-sticky {
+    @apply fixed inset-x-0 top-0 w-full z-20 animate-fadeInDown bg-white shadow-sticky transition-all ease-linear duration-300;
+  }
+  .is-sticky .main-menu .main-menu__item > a {
+    @apply block py-5;
+  }
+
+  .custom-tab-nav .active a {
+    @apply text-orange;
+  }
+
+  .checkbox:checked + label::before {
+    @apply bg-orange border-orange;
+  }
+
+  .checkbox:checked + label::after {
+    @apply empty absolute left-2 top-2 block w-1 h-2 border-b-2 border-r-2 transform rotate-45 border-white;
+  }
+
+  .pagination .active {
+    @apply bg-orange text-white;
+  }
+
+  .shop-tab-nav .active {
+    @apply text-orange;
+  }
+
+  .input-appearance-none {
+    -moz-appearance: textfield;
+  }
+  .input-appearance-none::-webkit-outer-spin-button,
+  .input-appearance-none::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  .size-swatch input[type="radio"]:checked + label {
+    @apply bg-orange text-white;
+  }
+  .colors-swatch input[type="radio"]:checked + label {
+    @apply text-white;
+  }
+  .colors-swatch input[type="radio"]:checked + label::after {
+    left: 6px;
+    width: 15px;
+    height: 10px;
+    @apply empty absolute top-2 border-l-2 border-b-2 border-solid border-white rounded-none transform -rotate-45;
+  }
+  .custom-tab-nav li.active a:before {
+    @apply w-full;
+  }
+  .custom-tab-nav a:hover::before {
+    @apply w-full left-0 right-auto;
+    transition: width 0.3s ease-in;
+  }
+
+  .gallery-nav .swiper-slide {
+    @apply border border-solid border-transparent;
+  }
+
+  .gallery-nav .swiper-slide-thumb-active {
+    @apply border border-solid border-orange;
+  }
+
+  .account-nav .active {
+    @apply bg-orange;
+  }
+  .account-nav .active a {
+    @apply text-white;
+  }
+}
+
